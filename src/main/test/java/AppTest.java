@@ -9,23 +9,23 @@ import static org.fluentlenium.core.filter.FilterConstructor.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class AppTest extends FluentTest {
-  // public WebDriver webDriver = new HtmlUnitDriver();
-  //
-  // @Override
-  // public WebDriver getDefaultDriver() {
-  //   return webDriver;
-  // }
-  //
-  // @ClassRule
-  // public static ServerRule server = new ServerRule();
-  //
-  // @Rule
-  // public ClearRule ClearRule = new ClearRule();
-  //
-  //
-  // @Test
-  // public void rootTest() {
-  //   goTo("http://localhost:4567/");
-  //   assertThat(pageSource()).contains("Task list!");
-  // }
+  public WebDriver webDriver = new HtmlUnitDriver();
+
+  @Override
+  public WebDriver getDefaultDriver() {
+    return webDriver;
+  }
+
+  @ClassRule
+  public static ServerRule server = new ServerRule();
+
+  @Rule
+  public ClearRule ClearRule = new ClearRule();
+
+
+  @Test
+  public void rootTest() {
+    goTo("http://localhost:4567/");
+    assertThat(pageSource()).contains("Organize your albums!");
+  }
 }

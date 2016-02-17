@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.time.LocalDateTime;
 
 public class Album {
-  private static ArrayList<Task> instances = new ArrayList<Task>();
+  private static ArrayList<Album> instances = new ArrayList<Album>();
 
   private String mTitle;
   private int mId;
@@ -19,8 +19,9 @@ public class Album {
 
   public int getId() {
     return mId;
+  }
 
-  public static ArrayList<Task> all() {
+  public static ArrayList<Album> all() {
     return instances;
   }
 
